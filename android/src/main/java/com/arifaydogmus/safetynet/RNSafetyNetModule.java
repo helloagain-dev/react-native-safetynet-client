@@ -1,7 +1,7 @@
 
 package com.arifaydogmus.safetynet;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.app.Activity;
 import android.util.Base64;
 

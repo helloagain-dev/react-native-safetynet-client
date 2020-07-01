@@ -45,10 +45,6 @@ type VerifyReCaptcha = (args: VerifyReCaptchaArgs) => Promise<any>;
 
 const { RNSafetyNet } = NativeModules;
 
-const isPlayServicesAvailable = async () => {
-  return await RNSafetyNet.isPlayServicesAvailable();
-};
-
 const requestNonce: RequestNonce = async args =>
   fetch(args.endPointUrl, {
     body: JSON.stringify({ data: args.additionalData || '' }),
@@ -137,5 +133,4 @@ export default {
   verifyAttestationResult,
   sendRecaptchaRequest,
   verifyReCaptchaResult,
-  isPlayServicesAvailable,
 };

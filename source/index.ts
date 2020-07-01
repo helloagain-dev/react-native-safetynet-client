@@ -45,7 +45,7 @@ type VerifyReCaptcha = (args: VerifyReCaptchaArgs) => Promise<any>;
 
 const { RNSafetyNet } = NativeModules;
 
-const isPlayServicesAvailable: boolean = async () => {
+const isPlayServicesAvailable = async () => {
   return await RNSafetyNet.isPlayServicesAvailable();
 };
 
